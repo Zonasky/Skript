@@ -2,17 +2,16 @@
 
 /*
      		 _         _       _   _          
-			| |       (_)     | | | |         
-		 ___| | ___ __ _ _ __ | |_| |__   ___ 
-		/ __| |/ / '__| | '_ \| __| '_ \ / _ \
-		\__ \   <| |  | | |_) | |_| |_) |  __/
-		|___/_|\_\_|  |_| .__/ \__|_.__/ \___|
-						| |                   
-						|_|            
+			| |       (_)            
+		 ___| | ___ __ _ _ __ | |_
+		/ __| |/ / '__| | '_ \| __|
+		\__ \   <| |  | | |_) | |_
+		|___/_|\_\_|  |_| .__/ \__|						| |                   
+						           
 
 
 		Port version of Bukkit Skript for PocketMine-MP
-		@Homepage: https://skriptbe.ga
+		@Homepage: https://github.com/Zonasky/Skript
 		
 */
 
@@ -24,7 +23,7 @@ class SkriptUpdate {
     
     private $plugin;
 	
-	private $url = "skriptbe.ga";
+	private $url = "coming soon";
     
     public function __construct(SkriptMain $plugin) {
         $this->plugin = $plugin;
