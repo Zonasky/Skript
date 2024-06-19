@@ -347,7 +347,7 @@ class SkriptLoader {
 				$line = explode("#", $line)[0];
 			}
 			$line = preg_replace("/\s+/S", " ", $line);
-			if(isset($line{0})){
+			if(isset($line[0])){
 				if($line[0] == " "){
 					$line = preg_replace("/ /", "", $line, 1);
 				}
