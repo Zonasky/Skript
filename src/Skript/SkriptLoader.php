@@ -114,7 +114,7 @@ class SkriptLoader {
 				}
 				
 				if(strlen($line) > 2){
-					if($line{0} !== "#"){
+					if($line[0] !== "#"){
 						array_push($function, $line);
 					}
 				}
