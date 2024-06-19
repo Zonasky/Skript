@@ -1,5 +1,5 @@
 <p align="center">
-	<a href="https://skriptbe.ga"><img src="https://skriptbe.ga/img/banner.png"></img></a><br>
+<h1> NOTICE: SkriptBE will be Migrating to Zonasky\Zona soon </h1>	
 	<b>Port of Bukkit Skript for PocketMine-MP</b>
 </p>
 
@@ -10,9 +10,10 @@ Skript is a plugin that allows you to customize Minecraft's mechanics with simpl
 
 # Requirements
 SkriptBE requires latest PocketMine-MP.
-
+# What's New:
+> SkriptBE has been updated from PM3 to PM5. 2 new Events: SleepEvent and EatEvent. Open issues if found to squash bugs!
 # Download
-You can download latest version plugin form <a href="https://skriptbe.ga">here</a>
+You can download latest version plugin form <a href="https://poggit.pmmp/p/SkriptBE">here</a>
 
 # Install
 Download plugin and put to plugins folder.
