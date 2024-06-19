@@ -1,7 +1,7 @@
 name: SkriptBE
 main: Skript\SkriptMain
-version: 1.0.0
-api: 3.0.0
+version: 1.5.0
+api: 5.0.0
 author: DominixZ
 webside: https://skriptbe.ga
 description: Port version of Bukkit Skript for PocketMine-MP
@@ -9,3 +9,10 @@ description: Port version of Bukkit Skript for PocketMine-MP
 commands:
     skript:
         description: "main command of plugin SkriptBE"
+        permission: SkriptBE.skript
+        default: false
+
+permissions:
+ SkriptBE.skript:
+  default: op
+  description: "utilise the skript command"
