@@ -85,7 +85,7 @@ class SkriptLoader {
     
     public function loadScript(string $name) : bool {
         $fileName = "plugin_data/SkriptBE/scripts/" . $name;
-        if($name{0} !== "-" and $name{1} !== "-"){
+        if ($name[0] !== '-' && $name[1] !== '-') {
             $scriptName = explode(".", $name)[0];
 			$this->plugin->logger(str_replace("%script", $name, $this->lang->translate("enabling"))); 
 			$this->scripts["onCommand"][$scriptName] = [];
