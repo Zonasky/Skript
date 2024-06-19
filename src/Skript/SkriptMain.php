@@ -142,7 +142,7 @@ class SkriptMain extends PluginBase implements Listener {
     }
     
     public function getVersionSkript() : string {
-        return "1.0.0";
+        return "1.6.0";
     }
     
     public function getCommandsClass() : Command {
