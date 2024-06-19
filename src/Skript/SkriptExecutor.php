@@ -168,7 +168,7 @@ class SkriptExecutor {
 					}
 				}
 				
-				if(isset($inter[1]{0}) and $inter[1]{0} == "'"){
+				 if(isset($inter[1][0]) and $inter[1][0] == "'"){
 					$key = explode("'", $line)[1];
 					if($inter[2] == "is"){
 						if($key == $inter[3]){
