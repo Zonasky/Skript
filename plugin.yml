@@ -1,18 +1,18 @@
-name: SkriptBE
+name: Skript
 main: Skript\SkriptMain
-version: 1.5.0
+version: 1.6.0
 api: 5.0.0
-authors: [DominixZ, skyss0fly-pm-pl]
-webside: https://github.com/skyss0fly-pm-pl/SkriptBE 
+author: Zonasky
+webside: https://github.com/Zonasky/Skript 
 description: Port version of Bukkit Skript for PocketMine-MP
 
 commands:
     skript:
         description: "main command of plugin SkriptBE"
-        permission: SkriptBE.skript
+        permission: Skript.skript
         default: false
 
 permissions:
- SkriptBE.skript:
+ Skript.skript:
   default: op
   description: "utilise the skript command"
