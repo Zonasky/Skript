@@ -352,7 +352,7 @@ class SkriptLoader {
 					$line = preg_replace("/ /", "", $line, 1);
 				}
 			}
-			if(strlen($line) > 1 and $line{strlen($line)-1} == " "){
+			if(strlen($line) > 1 and $line[strlen($line)-1] == " "){
 				$line = substr_replace($line ,"", -1);
 			}
 			if($this->plugin->config->get("color codes") == true){
