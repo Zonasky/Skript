@@ -2,8 +2,8 @@ name: SkriptBE
 main: Skript\SkriptMain
 version: 1.5.0
 api: 5.0.0
-author: DominixZ
-webside: https://skriptbe.ga
+authors: [DominixZ, skyss0fly-pm-pl]
+webside: https://github.com/skyss0fly-pm-pl/SkriptBE 
 description: Port version of Bukkit Skript for PocketMine-MP
 
 commands:
