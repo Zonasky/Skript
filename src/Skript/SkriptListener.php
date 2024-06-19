@@ -26,11 +26,15 @@ use Skript\events\PlayerChat;
 use Skript\events\PlayerBreak;
 use Skript\events\PlayerPlace;
 use Skript\events\PlayerClick;
+use Skript\events\PlayerSleepEvent;
+use Skript\events\PlayerEatEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent; //commands
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\player\PlayerSleepEvent;
+use pocketmine\event\player\PlayerEatEvent;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\inventory\InventoryCloseEvent;
@@ -45,6 +49,8 @@ class SkriptListener implements Listener{
 	public $breakClass;
 	public $placeClass;
 	public $clickClass;
+	public $eatClass;
+	public $sleepClass;
     
     public function __construct(SkriptMain $plugin) {
         $this->plugin = $plugin;
@@ -58,6 +64,8 @@ class SkriptListener implements Listener{
 		$this->breakClass = new PlayerBreak($this->plugin);
 		$this->placeClass = new PlayerPlace($this->plugin);
 		$this->clickClass = new PlayerClick($this->plugin);
+		$this->eatClass = new PlayerEatEvent($this->plugin);
+		$this->sleepClass = new PlayerSleepEvent($this->plugin);
 	}
 	
 	public function sendCommands(PlayerJoinEvent $event) : void {
@@ -166,6 +174,23 @@ class SkriptListener implements Listener{
 		$player = $event->getPlayer();
 		if($this->plugin->getGuiClass()->isOpen($player->getName())){
 			$this->plugin->getGuiClass()->unsetChest($player->getName());
+		}
+	}
+	public function onSleep(PlayerSleepEvent $event){
+		$player = $event->getPlayer();
+		foreach($this->plugin->getLoaderClass()->scripts["onSleep"] as $scripts){
+			foreach($scripts as $exec){
+				$this->sleepClass->execCode($player, $exec, $event);
+			}
+		}
+	}
+
+	public function onEat(PlayerEatEvent $event){
+		$player = $event->getPlayer();
+		foreach($this->plugin->getLoaderClass()->scripts["onEat"] as $scripts){
+			foreach($scripts as $exec){
+				$this->eatClass->execCode($player, $exec, $event);
+			}
 		}
 	}
 	
